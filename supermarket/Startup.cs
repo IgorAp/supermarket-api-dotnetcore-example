@@ -15,6 +15,7 @@ using supermarket.Domain.Services;
 using supermarket.Services;
 using supermarket.Domain.Repositories;
 using supermarket.Persistence.Repositories;
+using AutoMapper;
 
 namespace supermarket
 {
@@ -36,6 +37,7 @@ namespace supermarket
             });
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryServies, CategoryServices>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
