@@ -1,4 +1,5 @@
-﻿using supermarket.Domain.Models;
+﻿using supermarket.Domain.Communication;
+using supermarket.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,7 @@ namespace supermarket.Domain.Services
     public interface ICategoryServies
     {
         Task<IEnumerable<Category>> ListAsync();
+
+        Task<SaveCategoryResponse> AddAsync(Category category);
     }
 }

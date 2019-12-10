@@ -37,6 +37,7 @@ namespace supermarket
             });
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryServies, CategoryServices>();
+            services.AddScoped<IUnityOfWork,UnityOfWork>();
             services.AddAutoMapper(typeof(Startup));
         }
 
